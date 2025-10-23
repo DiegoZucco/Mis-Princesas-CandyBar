@@ -31,7 +31,7 @@ const Productos = ({agregarAlCarrito, limite}) => {
 
   return (
     <div>
-      
+      z
       <div className={productoStyles.productoCard}>
         {mostrarProductos.map(data => (
           <div key={data.id} className={productoStyles.producto}>
