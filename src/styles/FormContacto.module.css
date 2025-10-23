@@ -1,0 +1,63 @@
+.container {
+    width: 60%;
+   
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #b4adad;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+    text-align: center;
+    color: #6e2f44;
+    margin-bottom: 20px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+
+}
+form
+    {
+    width: 90%;
+    margin: auto;
+    padding: 21px;
+    background-color: #c0c0c0;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    }
+.formGroup {
+    width: 100%;
+    margin: 10px auto;
+    text-align: center;
+    
+    
+}
+
+.formGroup label {
+    display: block;
+    text-align: start;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+
+}
+
+.formGroup input[type="text"],
+.formGroup input[type="email"],
+.formGroup textarea {
+    width: 90%;
+    margin: 5px auto;
+    padding: 10px;
+    border: 1px solid #a5a1a1;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-align: center;
+}
+
+.formGroup textarea {
+    resize: vertical;
+    min-height: 100px;
+    max-height: 200px;
+
+}
