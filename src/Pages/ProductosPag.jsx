@@ -12,4 +12,4 @@ const ProductosPag = ({agregarAlCarrito, carrito, vaciarCarrito}) => {
   )
 }
 
-export default ProductosPag
+export default ProductosPag;

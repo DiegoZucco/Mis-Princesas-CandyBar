@@ -1,11 +1,13 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import productoStyles from "../styles/Productos.module.css"
-
-const Productos = ({agregarAlCarrito, limite}) => {
+import {useNavigate } from "react-router-dom";
+const Productos = ({ agregarAlCarrito, limite }) => {
   const [Productos, setProductos] = useState([]);
   const [cargando, setCargando] = useState(true);
   const [error, setError] = useState(null);
+
+  const navigate = useNavigate()
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products/")
@@ -38,7 +40,8 @@ const Productos = ({agregarAlCarrito, limite}) => {
             <h3>{data.title}</h3>
             <p> Precio: ${data.price}</p>
             <img src={data.image} alt={data.title} width={"50px"} />
-          <button onClick={()=>{agregarAlCarrito(data)}} >Agregar al carrito</button>
+            <button onClick={() => { agregarAlCarrito(data) }} >Agregar al carrito</button>
+            <button onClick={() => navigate(`/productos/${data.id}`)}>Mostrar detalles</button>
           </div>
         ))}
       </div>
