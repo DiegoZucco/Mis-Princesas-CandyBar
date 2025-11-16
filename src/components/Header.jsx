@@ -17,8 +17,8 @@ function Header({carrito}) {
 
         <h1>Mis Princesas CandyBar</h1>
         <div className={headerStyles.loginSingInCarrito}>
-          <Link>Crear cuenta</Link>
-          <Link href="#">Iniciar sesion</Link>
+          <Link to={"/IniciarSesionPage"}>Iniciar Sesion</Link>
+          <Link to={"/CrearCuentaPage"}>Crear Cuenta</Link>
         </div>
         <div>
           <Link to="/carrito"><img className={headerStyles.carritoCompras} src={carritoCompras} alt="carritoCompras" /><span>{carrito.length}</span></Link>
