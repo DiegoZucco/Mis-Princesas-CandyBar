@@ -4,10 +4,15 @@ import carritoCompras from "../assets/imagenes/carrito-de-compras.png"
 import FormBusqueda from "./FormBusqueda.jsx";
 import Nav from "./Nav.jsx";
 import { Link } from "react-router-dom";
+import { CarritoContext } from "../context/CarritoContext.jsx";
+import { useContext } from "react";
+import { UserContext } from "../context/UserContext.jsx";
 
 
 
-function Header({carrito}) {
+function Header() {
+  const { carrito } = useContext(CarritoContext);
+  const { isAuthenticated, logout } = useContext(UserContext);
 
   return (
     <header >
@@ -17,16 +22,28 @@ function Header({carrito}) {
 
         <h1>Mis Princesas CandyBar</h1>
         <div className={headerStyles.loginSingInCarrito}>
-          <Link to={"/IniciarSesionPage"}>Iniciar Sesion</Link>
-          <Link to={"/CrearCuentaPage"}>Crear Cuenta</Link>
+          {isAuthenticated ? (
+            <div className={headerStyles.bienvenidoLogout}>
+
+              <span>Bienvenido!</span>
+
+              <button onClick={logout}>Cerrar Sesión</button>
+            </div>
+          ) : (
+            <div>
+              <Link to={"/IniciarSesionPage"}>Iniciar Sesion</Link>
+
+              <Link to={"/CrearCuentaPage"}>Crear Cuenta</Link>
+            </div>
+          )}
         </div>
-        <div>
+        <div className={headerStyles.carrito}>
           <Link to="/carrito"><img className={headerStyles.carritoCompras} src={carritoCompras} alt="carritoCompras" /><span>{carrito.length}</span></Link>
-        </div>
+          </div>
 
       </div>
       <Nav />
-      
+
     </header>
   );
 }

@@ -1,7 +1,11 @@
 import styles from '../styles/Carrito.module.css'; // Usamos el CSS que ya creamos
+import { useContext } from 'react';
+import { CarritoContext } from '../context/CarritoContext.jsx';
 
 // El componente solo recibe las props originales: carrito y vaciarCarrito
-const Carrito = ({ carrito, vaciarCarrito }) => {
+const Carrito = () => {
+
+const { carrito, vaciarCarrito } = useContext(CarritoContext);
 
     // Mantenemos la lógica original para el carrito vacío
     if (carrito.length === 0) {

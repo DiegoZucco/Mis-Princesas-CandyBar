@@ -1,8 +1,14 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState, useContext } from "react";
+import { Link,} from "react-router-dom";
 import productStyle from "../styles/Productos.module.css";
+import { CarritoContext} from "../context/CarritoContext.jsx";
+import { UserContext } from "../context/UserContext.jsx";
+import { useNavigate } from "react-router-dom";
 
-const Productos = ({ agregarAlCarrito, limite }) => {
+
+const Productos = ({limite }) => {
+    const { manejarAgregarAlCarrito } = useContext(CarritoContext);
+    const isAuthenticated = useContext(UserContext)
     const [productos, setProductos] = useState([]);
     const [cargando, setCargando] = useState(true);
     const [error, setError] = useState(null);
@@ -49,9 +55,13 @@ const Productos = ({ agregarAlCarrito, limite }) => {
 
                         {/* Acciones de la Tarjeta */}
                         <div className={productStyle.cardActions}>
+                            {isAuthenticated.isAuthenticated ? null : (<p className={productStyle.loginPrompt}>Inicia sesión para comprar</p>
+                            )}
                             <button 
+                               
                                 className={productStyle.primaryButton}
-                                onClick={() => agregarAlCarrito(data)}
+                                onClick={() => manejarAgregarAlCarrito(data)
+                                }
                             >
                                 Agregar al carrito
                             </button>

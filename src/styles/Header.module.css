@@ -16,6 +16,10 @@
     width: 50px;
     height: 50px;
 }
+.carritoCompras:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
 
 .headerH4 {
     font-family: 'Comic Sans MS', cursive, sans-serif;
@@ -35,7 +39,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .loginSingInCarrito img {
@@ -48,4 +52,23 @@
     color: #333;
     font-weight: bold;
     transition: color 0.3s;
+   margin: 5px;
+}
+
+.loginSingInCarrito a:hover {
+    color: #ff69b4;
+}
+.bienvenidoLogout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.bienvenidoLogout span {
+    font-weight: bold;
+    color: #333;
+    margin: 5px;
+}
+.carrito a {
+    text-decoration: none;
 }

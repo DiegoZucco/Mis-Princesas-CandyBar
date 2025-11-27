@@ -1,6 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { UserContext } from '../context/UserContext.jsx';
+import{ useNavigate } from 'react-router-dom';
 
 const FormIniciarSesion = () => {
+  const {login} = useContext(UserContext);
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -9,6 +13,8 @@ const FormIniciarSesion = () => {
     console.log('Login attempt with:', { email, password });
     // Aquí puedes añadir la lógica de autenticación
     alert(`Intentando iniciar sesión con ${email}`);
+    login();
+    navigate("/");
   };
 
   return (
