@@ -33,6 +33,13 @@ const manejarAgregarCarrito = (data) => {
     navigate("/IniciarSesionPage");
   }
 }
+
+useEffect(() => {
+  if (!usuario) {
+    setCarrito([]);
+  }
+}, [usuario]);
+
 useEffect(() => {
 localStorage.setItem("carrito", JSON.stringify(carrito));
 }, [carrito]);
