@@ -2,11 +2,12 @@
 import stylesNav from "../styles/Nav.module.css"
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/imagenes/logo_Mis_Princesas.png";
 
 function Nav() {
     return (
         <nav className={stylesNav.navbar}>
-            <img className={stylesNav.logo} src="./src/assets/imagenes/logo_Mis_Princesas.png" alt="logo" />
+            <img className={stylesNav.logo} src={logo} alt="logo Mis Princesas CandyBar" />
             <ul className={stylesNav.navbarUl} >
                 <Link to= "/" >Inicio</Link>
                 <Link to= "/Productos">Productos</Link>

@@ -1,4 +1,5 @@
 import React,{createContext, useState} from "react";
+import { useNavigate } from "react-router-dom";
 
 const UsuariosFake = [
     {
@@ -23,6 +24,8 @@ export const UserContext = createContext();
 
 export const UserProvider = ({children}) => {
 
+    const navigate = useNavigate();
+
     const [usuario, setUsuario] = useState(() => {
         const usuarioGuardado = localStorage.getItem("usuario");
         return usuarioGuardado ? JSON.parse(usuarioGuardado) : null;
@@ -46,6 +49,7 @@ export const UserProvider = ({children}) => {
         localStorage.removeItem("usuario");
         localStorage.removeItem("carrito");
         setUsuario(null);
+        navigate("/");
     };
 
     return (

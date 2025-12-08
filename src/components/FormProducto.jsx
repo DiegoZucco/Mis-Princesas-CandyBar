@@ -78,7 +78,7 @@ const FormProducto =({ modo, productoAEditar, onFormSubmit })=>{
             <label className={formStyle.formLabel} htmlFor="categoria">Categoria:</label>
             <input className={formStyle.formInput} type="text" placeholder="Categoria" value={categoria} onChange={(e)=> setCategoria (e.target.value)} required/>
             <label className={formStyle.formLabel} htmlFor="imagen">Imagen:</label>
-            <input className={formStyle.formInput} type="text" placeholder="Imagen URL" value={imagen} onChange={(e)=> setImagen (e.target.value)} required/>
+            <input className={formStyle.formInput} type="text" placeholder="Imagen URL" value={imagen} onChange={(e)=> setImagen (e.target.value)}/>
             <button type="submit">{modo === 'crear' ? 'Agregar Producto' : 'Guardar Cambios'}</button>
 
         </form>);
