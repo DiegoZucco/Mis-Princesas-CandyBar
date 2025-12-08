@@ -5,7 +5,7 @@ import FormCrearCuenta from '../components/FormCrearCuenta';
 const CrearCuentaPage= ()=>{
     return(
         <div>
-            <h2>Crear Cuenta</h2>
+            <h2 >Crear Cuenta</h2>
             <FormCrearCuenta   />
         </div>
     );

@@ -1,0 +1,121 @@
+.carouselContainer {
+    width: 90%;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.carouselContainer h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo del Slide (la tarjeta) */
+.slide {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: 90%;
+    max-width: 350px; /* Ancho de la tarjeta */
+    transition: transform 0.5s ease-in-out;
+}
+
+.imageContainer {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.slideImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slideContent {
+    padding: 1rem;
+    text-align: left;
+    flex-grow: 1; /* Permite que el contenido crezca y empuje las acciones hacia abajo */
+}
+
+.slideContent h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.description {
+    font-size: 0.9rem;
+    color: #666;
+    min-height: 40px; /* Espacio para la descripción */
+}
+
+.price {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-top: 0.5rem;
+}
+
+/* Contenedor para los botones */
+.cardActions {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.primaryButton,
+.secondaryButton {
+    text-shadow: rgb(161, 160, 160) 1px 1px 2px;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.5s ease;
+    text-decoration: none;
+}
+
+.primaryButton {
+    background-color: #eca5b0;
+    color: #333;
+}
+
+.primaryButton:hover {
+    background-color: #c5808c;
+}
+
+.secondaryButton {
+    background-color: #cfc8c8;
+    color: #333;
+}
+
+.secondaryButton:hover {
+    background-color: #a1a0a0;
+}
+
+/* Flechas del carrusel */
+.arrow {
+    cursor: pointer;
+    font-size: 2rem;
+    color: #333;
+    background: none;
+    border: none;
+    padding: 0 1rem;
+}

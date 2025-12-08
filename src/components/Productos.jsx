@@ -2,17 +2,14 @@ import { useEffect, useState, useContext } from "react";
 import { Link,} from "react-router-dom";
 import productStyle from "../styles/Productos.module.css";
 import { CarritoContext} from "../context/CarritoContext.jsx";
-import { UserContext } from "../context/UserContext.jsx";
-import { useNavigate } from "react-router-dom";
-
+ 
 
 const Productos = ({limite }) => {
-    const { manejarAgregarAlCarrito } = useContext(CarritoContext);
-    const isAuthenticated = useContext(UserContext)
+    const { manejarAgregarCarrito } = useContext(CarritoContext);
     const [productos, setProductos] = useState([]);
     const [cargando, setCargando] = useState(true);
     const [error, setError] = useState(null);
-    const URL = "https://fakestoreapi.com/products/";
+    const URL = "https://692f7c1e778bbf9e006d9738.mockapi.io/productos";
 
     useEffect(() => {
         fetch(URL)
@@ -44,27 +41,32 @@ const Productos = ({limite }) => {
                         
                         {/* Contenedor de la Imagen */}
                         <div className={productStyle.imageContainer}>
-                            <img src={data.image} alt={data.title} />
+                            <img src={data.imagen} alt={data.nombre} />
                         </div>
 
                         {/* Contenido de la Tarjeta */}
                         <div className={productStyle.cardContent}>
-                            <h3 className={productStyle.productTitle}>{data.title}</h3>
-                            <p className={productStyle.productPrice}>${data.price}</p>
+                            <h3 className={productStyle.productTitle}>{data.nombre}</h3>
+                            <p className={productStyle.descripcion}>{data.descripcion}</p>
+                            <p className={productStyle.productPrice}> precio ${data.precio}</p>
                         </div>
 
                         {/* Acciones de la Tarjeta */}
                         <div className={productStyle.cardActions}>
-                            {isAuthenticated.isAuthenticated ? null : (<p className={productStyle.loginPrompt}>Inicia sesión para comprar</p>
-                            )}
+        
                             <button 
                                
                                 className={productStyle.primaryButton}
-                                onClick={() => manejarAgregarAlCarrito(data)
+                                onClick={() => manejarAgregarCarrito(data)
+                                    
                                 }
                             >
                                 Agregar al carrito
                             </button>
+
+                
+
+                     
                             <Link 
                                 to={`/productos/${data.id}`}
                                 className={productStyle.secondaryButton}

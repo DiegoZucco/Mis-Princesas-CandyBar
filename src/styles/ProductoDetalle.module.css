@@ -1,0 +1,99 @@
+.detalleContainer {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap; /* Para que se adapte en pantallas pequeñas */
+}
+
+.imagenContainer {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagenProducto {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.infoContainer {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nombreProducto {
+    font-size: 2.5rem;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.categoriaProducto {
+    font-size: 1rem;
+    color: #888;
+    background-color: #f2f2f2;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    text-transform: capitalize;
+}
+
+.descripcionProducto {
+    font-family: sans-serif;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1; /* Empuja el precio y el botón hacia abajo */
+}
+
+.precioProducto {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e83e8c; /* Color rosa principal */
+    margin-bottom: 1.5rem;
+}
+
+.agregarBtn {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #e83e8c;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+.agregarBtn:hover {
+    background-color: #d1367d;
+    transform: translateY(-2px);
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .detalleContainer {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+    .nombreProducto {
+        font-size: 2rem;
+    }
+}

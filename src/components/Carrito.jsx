@@ -5,7 +5,7 @@ import { CarritoContext } from '../context/CarritoContext.jsx';
 // El componente solo recibe las props originales: carrito y vaciarCarrito
 const Carrito = () => {
 
-const { carrito, vaciarCarrito } = useContext(CarritoContext);
+const { carrito, eliminarArticulo, vaciarCarrito } = useContext(CarritoContext);
 
     // Mantenemos la lógica original para el carrito vacío
     if (carrito.length === 0) {
@@ -29,13 +29,13 @@ const { carrito, vaciarCarrito } = useContext(CarritoContext);
                         
                         {/* Contenedor para la imagen */}
                         <div className={styles.itemImage}>
-                            <img src={data.image} alt={data.title} />
+                            <img src={data.imagen} alt={data.nombre} />
                         </div>
 
                         {/* Contenedor para los detalles */}
                         <div className={styles.itemDetails}>
-                            <h3 className={styles.itemTitle}>{data.title}</h3>
-                            <p className={styles.itemPrice}>${data.price.toFixed(2)}</p>
+                            <h3 className={styles.itemTitle}>{data.nombre}</h3>
+                            <p className={styles.itemPrice}>${data.precio}</p>
                         </div>
 
                         {/* Contenedor para los botones originales */}
@@ -43,7 +43,7 @@ const { carrito, vaciarCarrito } = useContext(CarritoContext);
                             <button className={styles.checkoutButton} style={{fontSize: '0.9rem', padding: '8px 12px'}}>Comprar</button>
                             {/* Este botón llama a la función `vaciarCarrito` original */}
                             <button 
-                                onClick={vaciarCarrito} 
+                                onClick={eliminarArticulo} 
                                 className={styles.removeButton}
                             >
                                 Eliminiar Item

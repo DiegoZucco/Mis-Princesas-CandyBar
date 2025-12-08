@@ -1,10 +1,10 @@
 import React from 'react'
 import ProductoDetalle from '../components/ProductoDetalle.jsx'
 
-const ProductoIndividual = ({agregarAlCarrito}) => {
+const ProductoIndividual = () => {
   return (
     <div>
-      <ProductoDetalle agregarAlCarrito={agregarAlCarrito}/>
+      <ProductoDetalle/>
     </div>
   )
 }

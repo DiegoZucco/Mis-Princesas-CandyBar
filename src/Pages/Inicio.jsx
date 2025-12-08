@@ -1,14 +1,11 @@
 import React from 'react'
-import Productos from '../components/Productos.jsx';
-import Carrito from '../components/Carrito.jsx';
+import Carousel from '../components/Carousel.jsx';
 
-const Inicio = ({carrito, agregarAlCarrito, vaciarCarrito}) => {
+const Inicio = () => {
   return (
     <div>
-      <Carrito carrito={carrito} vaciarCarrito={vaciarCarrito}/>
-      <h2>Productos en oferta</h2>
-        <Productos agregarAlCarrito={agregarAlCarrito} limite={4} />
-
+      <h1 style={{ textAlign: 'center', margin: '2rem 0' }}>¡Bienvenida a Mis Princesas CandyBar!</h1>
+      <Carousel />
     </div>
   )
 }

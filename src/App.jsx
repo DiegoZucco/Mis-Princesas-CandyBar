@@ -11,6 +11,7 @@ import RutaProtegida from './components/RutaProtegida.jsx';
 import CrearCuentaPage from './Pages/CrearCuentaPage.jsx';
 import IniciarSesionPage from './Pages/IniciarSesionPage.jsx';
 import ProductoIndividual from './Pages/ProductoIndividual.jsx';
+import AdminPage from './Pages/AdminPage.jsx';
 
 function App() {
 
@@ -18,13 +19,16 @@ function App() {
     <div className={styles.App}>
       <Header />
       <Routes>
-        <Route path='/productos/:productosId' element={<ProductoIndividual/> }/>
+        <Route path='/productos/:id' element={<ProductoIndividual/> }/>
         <Route path="/" element={<Inicio/>} />
         <Route path="/productos" element={<ProductosPag />} />
         <Route path="/contacto" element={<FormContacto />} />
         <Route path="/IniciarSesionPage" element={<IniciarSesionPage />} />
         <Route path="/CrearCuentaPage" element={<CrearCuentaPage />} />
         <Route path="/carrito" element={<RutaProtegida> <Carrito/></RutaProtegida>}>
+        </Route>
+       <Route path="/admin" element={<RutaProtegida> <AdminPage/></RutaProtegida>}>
+
         </Route>
 
       </Routes>

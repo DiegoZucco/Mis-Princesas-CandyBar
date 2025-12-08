@@ -1,0 +1,68 @@
+.subtitulo {
+    text-align: center;
+    color: #555;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.listaProductos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.itemProducto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background-color: #fff;
+}
+
+.itemProducto img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 1rem;
+}
+
+.itemProducto span {
+    flex-grow: 1;
+    font-weight: 500;
+}
+
+.acciones button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.acciones button:hover {
+    opacity: 0.85;
+}
+
+.editarBtn {
+    background-color: #3498db; /* Azul */
+}
+
+.borrarBtn {
+    background-color: #e74c3c; /* Rojo */
+}
+
+.volverBtn {
+    background-color: #95a5a6; /* Gris */
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
