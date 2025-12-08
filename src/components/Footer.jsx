@@ -3,7 +3,7 @@
 const Footer = () => {
   return (
     <footer>
-        <p>© 2024 Mi Tienda. Todos los derechos reservados.</p>
+        <p>© 2025 Mi Tienda. Todos los derechos reservados.</p>
     </footer>
   );
 };

@@ -49,6 +49,7 @@ const Productos = ({limite }) => {
                             <h3 className={productStyle.productTitle}>{data.nombre}</h3>
                             <p className={productStyle.descripcion}>{data.descripcion}</p>
                             <p className={productStyle.productPrice}> precio ${data.precio}</p>
+                            <p className={productStyle.productCategory}>{data.categoria}</p>
                         </div>
 
                         {/* Acciones de la Tarjeta */}

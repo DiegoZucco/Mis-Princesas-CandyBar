@@ -1,4 +1,4 @@
-
+import formStyle from "../styles/FormProducto.module.css"
 import React, { useState } from 'react';
 
 const FormCrearCuenta = () => {
@@ -24,7 +24,7 @@ const FormCrearCuenta = () => {
   };
 
   return (
-    <div className="form-container">
+    <div className={formStyle.cuentasContainer}>
       
       <form onSubmit={handleSubmit}>
         <div className="form-group">
@@ -37,8 +37,8 @@ const FormCrearCuenta = () => {
             required
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="email">Email:</label>
+        <div >
+          <label className={formStyle.formLabel} htmlFor="email">Email:</label>
           <input
             type="email"
             id="email"

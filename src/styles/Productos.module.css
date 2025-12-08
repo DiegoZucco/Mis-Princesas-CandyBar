@@ -70,6 +70,13 @@
     color: #e7a3a3;
     margin-top: auto;
 }
+.productCategory {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #777;
+    margin-top: 8px;
+}
 
 /* Contenedor para los botones */
 .cardActions {
