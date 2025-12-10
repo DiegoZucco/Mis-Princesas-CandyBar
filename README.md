@@ -11,4 +11,9 @@ Currently, two official plugins are available:
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
 
-realizar las acciones para que una vez iniciada la sesion, pueda agregar items al carrito desde cualquier pagina, que al tocar el carrito me lleve a la pagina de carrito y no al inicio (siempre que este la sesion iniciada)
+Para prueba de usuarios utilizar
+usuario: admin
+Pass: 1234
+
+usuario: maria
+pass: 1234
